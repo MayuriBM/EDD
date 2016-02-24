@@ -26,8 +26,18 @@ public class Calculator {
 	 * Escribir todos los números del number al 0 de step en step.
 	 */
 	public static int[] stepThisNumber(int number, int step) {
-		throw  new NotImplementedException();
-		}
+		int length = 0; 
+		if(step>0 && number >0){
+			length = (number-1)/step;
+			int [] pasos = new int[length] ; 
+			for(int i=0; i<pasos.length; i++){
+				number -= step; // number = number -step
+				pasos[i] = number;
+			}
+			return pasos; 
+		}else 
+		return new int[0];
+	}
 
 	/*
 	 * Módulo al que se le pasa un número entero del 0 al 20 y devuelve los
