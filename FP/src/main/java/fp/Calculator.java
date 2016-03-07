@@ -93,8 +93,25 @@ public class Calculator {
 	 * mostrar: cincuenta y seis
 	 */
 	public static String speakToMe(int n) {
-		throw  new NotImplementedException();
-	}
+		//throw  new NotImplementedException();
+		String[] diez= {"Cero","Diez","Veinte","Treinta","Cuarenta","Cincuenta","Sesenta","Setenta","Ochenta","Noventa"};
+ 		String[] uno = {"","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","Diez","Once","Doce","Trece","Catorce","Quince","Dieciseis","Diecisiete","Dieciocho","Diecinueve"};
+ 		String mesa="";
+ 		if(n==0){
+ 			mesa=diez[0];
+ 			return mesa;
+ 		}else if(n<20){
+ 			mesa = uno[n];
+ 			return mesa;
+ 		}else if((n%10)==0){
+ 			mesa=diez[n/10];
+ 			return mesa;
+ 		}else{
+ 			mesa=diez[n/10]+" y "+uno[n%10];
+ 			return mesa;
+ 		}
+ 
+  	}
 
 	/*
 	 * este metodo devuelve cierto si el año de la fecha es bisiesto fecha
