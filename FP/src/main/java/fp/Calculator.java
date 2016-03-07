@@ -62,10 +62,25 @@ public class Calculator {
 	 * Módulo al que se le pasa un número entero del 0 al 20 y devuelve los
 	 * divisores que tiene.
 	 */
-	public static int[] divisors(int n) {
-		throw  new NotImplementedException();
+	public static String[] divisors(int n) {
+		//throw  new NotImplementedException();
+		String[] numeros = null;
+		int[] numeros2 = null;
+		int contar = 0;
+		String string = "";
+		
+		for (int i = n; i > 0; i--)
+			if (n % i == 0) {
+				contar++;
+				string += i+",";
+			}
+		if(n>0){
+			numeros = string.split(",");
+		}
+		return numeros;
 	}
-
+		
+		
 	/*
 	 * Toma como parámetros una cadena de caracteres y devuelve cierto si la cadena resulta ser un palíndromo
 	 */
