@@ -119,7 +119,7 @@ public class Calculator {
 	 */
 	public static boolean isLeapYear(String fecha) {
 		//throw  new NotImplementedException();
-if (isValidDate(fecha)){
+            if (isValidDate(fecha)){
  			
  			int año = Integer.valueOf(fecha.substring(fecha.length()-4, fecha.length()));
  			
@@ -135,6 +135,26 @@ if (isValidDate(fecha)){
 	 * este metodo devuelve cierto si la fecha es vÃ¡lida
 	 */
 	public static boolean isValidDate(String date) {
-		throw  new NotImplementedException();
+		//throw  new NotImplementedException();
+		try {
+ 			int año = Integer.valueOf(date.substring(6,10));
+ 			int dia = Integer.valueOf(date.substring(0,2));
+ 			int mes = Integer.valueOf(date.substring(3,5));
+ 			
+ 			
+ 			if (año==0 || mes==0 || dia==0 || mes > 12 || dia > 31){
+ 				return false;
+ 			}
+ 			
+ 		
+ 			Calendar calendar = new GregorianCalendar(año,mes,dia);
+ 			return true;
+ 			
+ 		} catch (Exception e){
+ 			
+ 			return false;
+ 		}
+ 		
+  	}
 	}
 }
