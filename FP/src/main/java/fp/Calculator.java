@@ -119,12 +119,10 @@ public class Calculator {
 	 */
 	public static boolean isLeapYear(String fecha) {
 		//throw  new NotImplementedException();
-            if (isValidDate(fecha)){
- 			
+      if (isValidDate(fecha)){
  			int año = Integer.valueOf(fecha.substring(fecha.length()-4, fecha.length()));
  			
- 			
- 			return ((año % 4 == 0) && (año % 100 != 0) || (año % 400 == 0));
+ 		return ((año % 4 == 0) && (año % 100 != 0) || (año % 400 == 0));
  			
  		} else {
  			return false;
