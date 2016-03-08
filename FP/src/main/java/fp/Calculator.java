@@ -2,8 +2,8 @@ package fp;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
 
 public class Calculator {
 
@@ -86,8 +86,8 @@ public class Calculator {
 	 */
 	public static boolean checkIsPalindrome(String cadena) {
 		throw  new NotImplementedException();
-	}
-
+		
+  	}
 	/*
 	 * Pedir un nÃºmero de 0 a 99 y mostrarlo escrito. Por ejemplo, para 56
 	 * mostrar: cincuenta y seis
@@ -118,7 +118,17 @@ public class Calculator {
 	 * dd-MM-yyyy
 	 */
 	public static boolean isLeapYear(String fecha) {
-		throw  new NotImplementedException();
+		//throw  new NotImplementedException();
+if (isValidDate(fecha)){
+ 			
+ 			int año = Integer.valueOf(fecha.substring(fecha.length()-4, fecha.length()));
+ 			
+ 			
+ 			return ((año % 4 == 0) && (año % 100 != 0) || (año % 400 == 0));
+ 			
+ 		} else {
+ 			return false;
+ 		}
 	}
 
 	/*
